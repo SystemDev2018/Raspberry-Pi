@@ -103,7 +103,7 @@ public class MainExtends extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-         Move();
+           Move();
         } else if (id == R.id.nav_slideshow) {
 
         }else if (id == R.id.nav_share) {
