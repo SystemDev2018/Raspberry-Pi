@@ -27,7 +27,7 @@ public class MainExtends extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     int view;
-
+    Activity root;
     public MainExtends(int v){
         view=v;
     }
@@ -91,9 +91,12 @@ public class MainExtends extends AppCompatActivity
 
 
     public void Move() {
-        startActivity(new Intent(MainExtends.this,TvActivity.class));
+        startActivity(new Intent(root,TvActivity.class));
     }
 
+    public void setRoot(Activity ac){
+        root=ac;
+    }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
