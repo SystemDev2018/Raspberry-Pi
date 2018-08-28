@@ -23,6 +23,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+
 public class MainExtends extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -100,6 +110,7 @@ public class MainExtends extends AppCompatActivity
     public void setRoot(Activity ac){
         root=ac;
     }
+    int kim=0;
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -112,6 +123,37 @@ public class MainExtends extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
            MoveTv();
         } else if (id == R.id.nav_slideshow) {
+//            try {
+//                InputStream in;
+//                String kimura2;
+//                in=openFileInput("C:\\Users\\kimura\\Documents\\GitHub\\Raspberry-Pi\\RaspberryPiCtl\\app\\src\\main\\res\\layout\\content_main.xml");
+//                BufferedReader reader= new BufferedReader(new InputStreamReader(in,"UTF-8"));
+//
+//                OutputStream out;
+//                out = openFileOutput("C:\\Users\\kimura\\Documents\\GitHub\\Raspberry-Pi\\RaspberryPiCtl\\app\\src\\main\\res\\layout\\content_main.xml",MODE_PRIVATE|MODE_APPEND);
+//                PrintWriter writer = new PrintWriter(new OutputStreamWriter(out,"UTF-8"));
+//
+//                while( (kimura2 = reader.readLine()) != null ){
+//                    writer.println(kimura2);
+//                    if(kimura2.contains("app:layout_constraintTop_toTopOf=\"parent\" />")==true){
+//                        writer.println( " <TextView android:layout_width=\"wrap_content\" " +
+//                                "android:layout_height=\"wrap_content\" " +
+//                                "android:text=\"Hello World!"+(kim++)+"\"" +
+//                                "app:layout_constraintBottom_toBottomOf=\"parent\" " +
+//                                "app:layout_constraintLeft_toLeftOf=\"parent\" " +
+//                                "app:layout_constraintRight_toRightOf=\"parent\" " +
+//                                "app:layout_constraintTop_toTopOf=\"parent\" />");
+//                    }
+//                }
+//                writer.close();
+//
+//            } catch (FileNotFoundException e) {
+//                e.printStackTrace();
+//            } catch (UnsupportedEncodingException e) {
+//                e.printStackTrace();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
         }else if (id == R.id.nav_share) {
 
