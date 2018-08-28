@@ -9,8 +9,6 @@ public class MainActivity extends MainExtends {
     }
     @Override
     public void Move(){
-        Intent intent=new Intent();
-        intent.setClassName(MainActivity.this,"TvActivity");
-        startActivity(intent);
+        startActivity(new Intent(MainActivity.this,TvActivity.class));
     }
 }

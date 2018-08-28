@@ -91,9 +91,7 @@ public class MainExtends extends AppCompatActivity
 
 
     public void Move() {
-        Intent intent=new Intent();
-        intent.setClassName(MainExtends.this,"TvActivity");
-        startActivity(intent);
+        startActivity(new Intent(MainExtends.this,TvActivity.class));
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
