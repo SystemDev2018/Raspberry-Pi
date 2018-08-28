@@ -1,6 +1,5 @@
 package com.example.higa3.raspberrypictl;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,12 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class TvActivity extends MainExtends
+public class AcActivity extends MainExtends
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    public TvActivity(){
+    public AcActivity(){
         super(R.layout.activity_main);
-        setRoot(TvActivity.this);
+        setRoot(AcActivity.this);
     }
-
 }

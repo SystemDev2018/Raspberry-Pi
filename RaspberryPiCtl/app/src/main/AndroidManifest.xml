@@ -22,6 +22,10 @@
         <activity
             android:name=".TvActivity"
             android:label="@string/title_activity_tv"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AcActivity"
+            android:label="@string/title_activity_ac"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

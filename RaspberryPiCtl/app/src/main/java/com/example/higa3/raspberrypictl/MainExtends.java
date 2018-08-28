@@ -90,10 +90,13 @@ public class MainExtends extends AppCompatActivity
     }
 
 
-    public void Move() {
+    public void MoveTv() {
         startActivity(new Intent(root,TvActivity.class));
     }
 
+    public void MoveAc() {
+        startActivity(new Intent(root,AcActivity.class));
+    }
     public void setRoot(Activity ac){
         root=ac;
     }
@@ -105,8 +108,9 @@ public class MainExtends extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            MoveAc();
         } else if (id == R.id.nav_gallery) {
-           Move();
+           MoveTv();
         } else if (id == R.id.nav_slideshow) {
 
         }else if (id == R.id.nav_share) {
