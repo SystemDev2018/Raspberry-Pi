@@ -7,6 +7,7 @@
 //}
 package com.example.higa3.raspberrypictl;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -88,6 +89,13 @@ public class MainExtends extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
+    public void Move() {
+        Intent intent=new Intent();
+        intent.setClassName(MainExtends.this,"TvActivity");
+        startActivity(intent);
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -97,9 +105,7 @@ public class MainExtends extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            Intent intent=
-                    new Intent(this,TvActivity.class);
-            startActivity(intent);
+         Move();
         } else if (id == R.id.nav_slideshow) {
 
         }else if (id == R.id.nav_share) {
