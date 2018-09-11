@@ -22,6 +22,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -44,7 +47,19 @@ public class MainExtends extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(view);
+
+        DrawerLayout layout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        for (int i = 0; i < 3; ++i) {
+            View view = getLayoutInflater().inflate(R.layout.sub, null);
+            layout.addView(view, 30, 100 * i);
+
+
+            TextView text = (TextView) view.findViewById(R.id.text);
+            text.setText("I'm android No." + i);
+        }
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -123,6 +138,8 @@ public class MainExtends extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
            MoveTv();
         } else if (id == R.id.nav_slideshow) {
+
+
 //            try {
 //                InputStream in;
 //                String kimura2;
@@ -166,4 +183,5 @@ public class MainExtends extends AppCompatActivity
         return true;
     }
 }
+
 
