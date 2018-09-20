@@ -50,9 +50,19 @@ public class MainExtends extends AppCompatActivity
 
         setContentView(view);
 
+
+
+
         DrawerLayout layout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        ///
+        LinearLayout linearLayout = new LinearLayout(this);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+        ///
+
         for (int i = 0; i < 3; ++i) {
-            View view = getLayoutInflater().inflate(R.layout.sub, null);
+            View view = getLayoutInflater().inflate(R.layout.content_main, null);
             layout.addView(view, 30, 100 * i);
 
 
